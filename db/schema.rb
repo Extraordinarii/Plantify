@@ -10,10 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_01_17_210228) do
+=======
+ActiveRecord::Schema.define(version: 2020_01_17_215842) do
+>>>>>>> 1350e5d8121bd41b1a4bd466e344329b36e41e79
 
-  create_table "owner", force: :cascade do |t|
+  create_table "owners", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+<<<<<<< HEAD
+  create_table "plants", force: :cascade do |t|
+    t.string "name"
+    t.integer "owner_id"
+    t.integer "planttype_id"
+=======
+  create_table "plant_types", force: :cascade do |t|
+    t.string "species"
+>>>>>>> 1350e5d8121bd41b1a4bd466e344329b36e41e79
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -21,13 +38,7 @@ ActiveRecord::Schema.define(version: 2020_01_17_210228) do
   create_table "plants", force: :cascade do |t|
     t.string "name"
     t.integer "owner_id"
-    t.integer "planttype_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "planttypes", force: :cascade do |t|
-    t.string "species"
+    t.integer "plant_type_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
