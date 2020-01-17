@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+o1 = @owners = Owner.create!(name: "John")
+o2 = @owners = Owner.create!(name: "Bruno")
+
+pt1 = @planttype = PlantType.create!(species: Spider)
+pt2 = @planttype = PlantType.create!(species: Snake)
+
+p1 = @plants = Plant.create!(name: "Hairy Styles", owner: o1, type: pt1)
+p2 = @plants = Plant.create!(name: "Cactus Perry", owner: o2, type: pt2)
