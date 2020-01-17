@@ -1,4 +1,4 @@
 class Plant < ApplicationRecord
-    belongs_to :planttype
+    belongs_to :plant_type
     belongs_to :owner
 end
