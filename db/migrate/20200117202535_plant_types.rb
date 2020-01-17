@@ -1,6 +1,6 @@
-class PlantTypes < ActiveRecord::Migration[6.0]
+class CreatePlantTypes < ActiveRecord::Migration[6.0]
   def change
-    create_tables :planttypes do |t| 
+    create_table :planttypes do |t| 
       t.string :species
   
       t.timestamps
