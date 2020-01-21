@@ -18,15 +18,8 @@ ActiveRecord::Schema.define(version: 2020_01_17_215842) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-<<<<<<< HEAD
-  create_table "plants", force: :cascade do |t|
-    t.string "name"
-    t.integer "owner_id"
-    t.integer "planttype_id"
-=======
   create_table "plant_types", force: :cascade do |t|
     t.string "species"
->>>>>>> 1350e5d8121bd41b1a4bd466e344329b36e41e79
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
