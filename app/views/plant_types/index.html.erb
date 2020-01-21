@@ -1,5 +1,7 @@
-<h1>Check out all the wonderful list of houseplants!</h1>
+<h1>Check out all the wonderful list of houseplants to add to your plant party!</h1>
 
 <% @plant_types.each do |plant_type|%><br>
-<%= plant_type.species %>
+<%= link_to plant_type.species, plant_type_path(plant_type) %>
 <%end%>
+
+<!-- Need to show info for each indiviual plant -->
