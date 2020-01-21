@@ -6,10 +6,21 @@ class OwnersController < ApplicationController
         @owner = Owner.new
     end
 
-    def create
-        @owner = Owner.create(params[:name])
-        redirect_to owner_path(@owner)
+    def current_user    
+        Owner.find_by(id: session[:owner_id])  
     end
+
+    def logged_in?
+       
+        !current_user.nil?  
+    end
+
+    def create
+        @owner = Owner.create(params.require(:owner).permit(:username,        
+        :password, :name))
+        session[:owner_id] = @owner.id
+        redirect_to '/welcome'
+     end
 
     def edit
         @owner = Owner.find(params[:id])
