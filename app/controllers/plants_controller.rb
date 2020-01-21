@@ -2,6 +2,8 @@ class PlantsController < ApplicationController
     def index 
         @plants = Plant.all
     end 
+    def landing_page
+    end 
 
     def new
         @plant = Plant.new
