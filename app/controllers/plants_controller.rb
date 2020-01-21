@@ -29,6 +29,9 @@ class PlantsController < ApplicationController
         redirect_to plants_path
     end
 
+    def search
+    end
+
     private
 
     def plant_params

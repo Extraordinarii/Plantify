@@ -7,4 +7,5 @@ class PlantTypesController < ApplicationController
     def show
         @plant_type = PlantType.find(params[:id])
     end
+    
 end
