@@ -1,4 +1,4 @@
 class Owner < ApplicationRecord
     has_many :plants
-    has_many :plnt_typess, through: :plants
+    has_many :plant_types, through: :plants
 end
