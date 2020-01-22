@@ -29,7 +29,7 @@ class PlantsController < ApplicationController
     def destroy
         @plant = Plant.find(params[:id])
         @plant.destroy 
-        redirect_to plants_path
+        redirect_to owner_path(@plant.owner)
     end
 
     def search
