@@ -25,6 +25,7 @@ class PlantsController < ApplicationController
 
     def edit
         @plant = Plant.find(params[:id])
+        @plant_types = PlantType.all
         @owners = Owner.all
     end
 
@@ -32,7 +33,7 @@ class PlantsController < ApplicationController
         @plant = Plant.find(params[:id])
         @plant.update(plant_params)
 
-        redirect_to plant_path(@plant)
+        redirect_to owner_path(@plant.owner.id)
     end
 
     def destroy
