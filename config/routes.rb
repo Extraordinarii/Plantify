@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   get '/login', to: "sessions#login"
   get 'sessions/welcome'
   
-  get 'plants/:id', to: 'plants#show', as: "plants"
-  patch 'plants/:id', to: 'plants#update'
-  get 'plants/:id/edit', to: 'plants#edit', as: "new_plant"
+  # get 'plants/new', to: 'plants#new', as: "new_plant"
+  # get 'plants/:id', to: 'plants#show', as: "plants"
+  # patch 'plants/:id', to: 'plants#update'
+  # get 'plants/:id/edit', to: 'plants#edit', as: "edit_plant"
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

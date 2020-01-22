@@ -14,7 +14,7 @@ class PlantsController < ApplicationController
 
     def show
         @plant = Plant.find(params[:id])
-        render :show
+        redirect_to owner_path(@owner)
     end
 
     def create
@@ -24,6 +24,7 @@ class PlantsController < ApplicationController
 
     def edit
         @plant = Plant.find(params[:id])
+        @owners = Owner.all
     end
 
     def update
