@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'waterings/date'
+  get 'waterings/amount'
   get '/apply', to: "sessions#new"
   get '/create', to: "sessions#create"
   get '/login', to: "sessions#login"
