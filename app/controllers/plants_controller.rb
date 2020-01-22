@@ -24,6 +24,7 @@ class PlantsController < ApplicationController
 
     def edit
         @plant = Plant.find(params[:id])
+        byebug
     end
 
     def update
