@@ -14,24 +14,28 @@ class PlantsController < ApplicationController
 
     def show
         @plant = Plant.find(params[:id])
-        render :show
+        redirect_to plant_path(@plant)
     end
 
     def create
         @plant = Plant.create(plant_params)
-        redirect_to plant_types_path
+        redirect_to plant_path(@plant)
     end
 
     def edit
         @plant = Plant.find(params[:id])
+<<<<<<< HEAD
         byebug
+=======
+        @owners = Owner.all
+>>>>>>> 63a689e1baabf9a9debafc44834fcf0355cf3a0c
     end
 
     def update
         @plant = Plant.find(params[:id])
         @plant.update(plant_params)
 
-        redirect_to owner_path(@owner)
+        redirect_to plant_path(@plant)
     end
 
     def destroy

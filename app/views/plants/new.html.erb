@@ -1,6 +1,8 @@
-<%= form_for @owner.plants.each do |plant| %>
-  Name of plant: <%= f.text_field :name %><br/>
-  <%= f.collection_select :plants, @plants, :id, :species%> <br> <!--select method? -->
+<h1>Create New Plant</h1>
+
+<%= form_for @plant do |f| %>
+<label>Plant Name</label>
+<%= f.text_field :name %><br>
+<%= f.collection_select :plant_type, @plant_types, :id, :species %>
 <%= f.submit %>
-</li>
 <%end%>

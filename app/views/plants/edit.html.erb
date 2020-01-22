@@ -1,8 +1,14 @@
 <h1>Edit Your Plant's Name</h1>
 <%= form_for @plant do |f| %>
+<<<<<<< HEAD
   Name of plant: <%= f.text_field :name %><br/>
   <%= f.collection_select :plant_types_id, @plant_type, :id, :species%> <br> <!--select method? -->
   <%= f.submit %>
 </li>
 
+=======
+<label>Plant Name</label>
+<%= f.text_field :name %><br>
+<%= f.submit %>
+>>>>>>> 63a689e1baabf9a9debafc44834fcf0355cf3a0c
 <%end%>
