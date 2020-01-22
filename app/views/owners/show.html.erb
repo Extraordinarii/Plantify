@@ -1,11 +1,7 @@
 <h1><%= @owner.name %>'s plant fam</h1>
 
-<p>-should have owner's name
--and list of plants they own
-</p>
-
 <% @owner.plants.each do |plant|%>
 <%= link_to plant.name, plant_type_path(plant.plant_type.id)%>
 <%end%>
 
-<%= button_to "Add New Plants to Your Plant Fam", plants_path, method: :get %>
+<%= button_to "Add New Plants to Your Plant Fam", new_plants_path, method: :get %>
