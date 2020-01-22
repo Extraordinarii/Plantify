@@ -1,6 +1,6 @@
 class PlantsController < ApplicationController
     def index 
-        @plants = Plant.all
+        @plants = Plant.find(params[:id])
     end 
     
     def landing_page
