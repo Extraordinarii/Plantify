@@ -18,9 +18,10 @@ class PlantsController < ApplicationController
     end
 
     def create
-        
-        @plant = Plant.create(plant_params)
-        redirect_to plant_path(@plant)
+        @plant = Plant.new(plant_params)
+        @plant.owner_id = session[:owner_id]
+        @plant.save
+        redirect_to owner_path(session[:owner_id])
     end
 
     def edit
