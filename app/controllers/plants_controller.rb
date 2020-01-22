@@ -24,18 +24,15 @@ class PlantsController < ApplicationController
 
     def edit
         @plant = Plant.find(params[:id])
-<<<<<<< HEAD
-        byebug
-=======
+        @plant_types = PlantType.all
         @owners = Owner.all
->>>>>>> 63a689e1baabf9a9debafc44834fcf0355cf3a0c
     end
 
     def update
         @plant = Plant.find(params[:id])
         @plant.update(plant_params)
 
-        redirect_to plant_path(@plant)
+        redirect_to owner_path(@plant.owner.id)
     end
 
     def destroy
