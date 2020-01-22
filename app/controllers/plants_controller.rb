@@ -8,7 +8,7 @@ class PlantsController < ApplicationController
 
     def new
         @plant = Plant.new
-        @owners = Owner.all
+        @owner = Owner.all
         @plant_types = PlantType.all
     end
 
@@ -19,7 +19,7 @@ class PlantsController < ApplicationController
 
     def create
         @plant = Plant.create(plant_params)
-        redirect_to plant_path(@plant)
+        redirect_to plant_types_path
     end
 
     def edit

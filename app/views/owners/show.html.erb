@@ -7,3 +7,7 @@
 <%end%>
 </ul>
 <%= button_to "Add new plants to your plant family", new_plant_path, method: :get %>
+<%= form_tag plant_type_path, :method =>  'get' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag("Search") %>
+<% end %>
