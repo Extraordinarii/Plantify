@@ -6,6 +6,10 @@ class OwnersController < ApplicationController
         @owner = Owner.new
     end
 
+    def show
+        @owner = Owner.find(params[:id])
+    end
+
     def current_user    
         Owner.find_by(id: session[:owner_id])  
     end
