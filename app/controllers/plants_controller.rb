@@ -1,6 +1,6 @@
 class PlantsController < ApplicationController
     def index 
-        @plants = Plant.all
+        @plants = Plant.find(params[:id])
     end 
     
     def landing_page
@@ -14,12 +14,12 @@ class PlantsController < ApplicationController
 
     def show
         @plant = Plant.find(params[:id])
-        redirect_to owner_path(@owner)
+        redirect_to plant_path(@plant)
     end
 
     def create
         @plant = Plant.create(plant_params)
-        redirect_to plant_types_path
+        redirect_to plant_path(@plant)
     end
 
     def edit
@@ -31,7 +31,7 @@ class PlantsController < ApplicationController
         @plant = Plant.find(params[:id])
         @plant.update(plant_params)
 
-        redirect_to owner_path(@owner)
+        redirect_to plant_path(@plant)
     end
 
     def destroy
