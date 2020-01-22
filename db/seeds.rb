@@ -11,12 +11,12 @@ PlantType.destroy_all
 Plant.destroy_all
 
 
-o1 = @owner = Owner.create!(name: "John", username: "john123", password: "123" )
-o2 = @owner = Owner.create!(name: "Bruno", username: "bruno123", password: "123" )
-o3 = @owner = Owner.create!(name: "Daemon", username: "daemon_duck", password: "123" )
-o4 = @owner = Owner.create!(name: "Barack", username: "rockababy", password: "123" )
-o5 = @owner = Owner.create!(name: "Bella", username: "bellzabub", password: "123" )
-o6 = @owner = Owner.create!(name: "Cookie", username: "cookarina", password: "123" )
+o1 = @owner = Owner.create!(username: "john123", password: "123" )
+o2 = @owner = Owner.create!(username: "bruno123", password: "123" )
+o3 = @owner = Owner.create!(username: "daemon_duck", password: "123" )
+o4 = @owner = Owner.create!(username: "rockababy", password: "123" )
+o5 = @owner = Owner.create!(username: "bellzabub", password: "123" )
+o6 = @owner = Owner.create!(username: "cookarina", password: "123" )
 
 pt1 = @plant_type = PlantType.create!(species: "Spider", bio: "The Spider plant is among the most adaptable houseplant and very easy to grow. A graceful plant that makes a statement anywhere—from a tabletop to a mantle, or with its lovely arching leaves as a hanging plant. The Spider Plant is also known for its tremendous air purifying qualities, making it a healthy addition to your home as well. Native to tropical and southern Africa, Spider plants have a reputation for being nearly impossible to kill. These fast-growing, fun plants are a great option for the first-time plant owner.", light: "Low")
 pt2 = @plant_type = PlantType.create!(species: "Snake", bio: "Native to arid regions of India, Sansevieria zeylanica is a species of snake plant characterized by its dark green variegation. Snake plants are tropical plants that are also succulents. Often positioned as low light plants, they are actually medium to bright light plants that tolerate, but not thrive in low light. Like other succulent plants, they have a modified form of photosynthesis, where in order to preserve water, the plant opens its pores exclusively at night. However, since photosynthesis only happens with daylight, the plant stores carbon dioxide acquired at night for use during the day, and releases oxygen (one of the end products of photosynthesis) at night when the pores open. This helps it to maximize efficiency in cleaning the air, as found in study conducted by NASA.", light: "Low")
