@@ -1,0 +1,6 @@
+<h1>Edit Your Plant's Name</h1><%= form_for @owner.plants.each do |plant| %>
+  Name of plant: <%= f.text_field :name %><br/>
+  <%= f.collection_select :plants, @plants, :id, :species%> <br> <!--select method? -->
+<%= f.submit %>
+</li>
+<%end%>

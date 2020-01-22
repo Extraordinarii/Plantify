@@ -26,6 +26,13 @@ class PlantsController < ApplicationController
         @plant = Plant.find(params[:id])
     end
 
+    def update
+        @plant = Plant.find(params[:id])
+        @plant.update(plant_params)
+
+        redirect_to owner_path(@owner)
+    end
+
     def destroy
         @plant = Plant.find(params[:id])
         @plant.destroy 
