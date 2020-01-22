@@ -1,1 +1,5 @@
-<h1>This is where you create new plants</h1>
+<%= form_for :plant do |f| %>
+  Name of plant: <%= f.text_field :name %><br />
+  Plant_type : <%= f.text_area :plant_type_id %><br /> <!--select method? -->
+  <%= f.submit %>
+<% end %>
