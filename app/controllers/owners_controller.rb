@@ -1,4 +1,6 @@
 class OwnersController < ApplicationController
+    # before_action :authorized, except: [:new, :create]
+
     def index
     end
     
@@ -26,7 +28,7 @@ class OwnersController < ApplicationController
         @owner = Owner.create(params.require(:owner).permit(:username,        
         :password, :name))
         session[:owner_id] = @owner.id
-        redirect_to '/welcome'
+        redirect_to owner_path(@owner)
      end
 
     def edit
