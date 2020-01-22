@@ -10,9 +10,4 @@
 </ul>
 
 <%= button_to "Add New Plants", new_plant_path, method: :get %><br><br>
-
-
-<%= form_tag plant_type_path, :method =>  'get' do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag("Search Plants") %>
-<% end %>
+<%= button_to("Search for plant type", plant_types_path, method: 'get')%>
