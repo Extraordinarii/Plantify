@@ -8,6 +8,7 @@ class OwnersController < ApplicationController
 
     def show
         @owner = Owner.find(params[:id])
+        @plants = @owner.plants
     end
 
     def current_user    

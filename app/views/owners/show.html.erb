@@ -1,7 +1,9 @@
 <h1><%= @owner.username %>'s plant fam</h1>
-
+<ul>
 <% @owner.plants.each do |plant|%>
-<%= link_to plant.name, plant_type_path(plant.plant_type.id)%>
+<li>
+<%= link_to plant.name, plant_type_path(plant.plant_type.id)%><%= button_to "Delete a plant from your plant family", plant_path(plant.id), method: :delete%>
+</li>
 <%end%>
-
+</ul>
 <%= button_to "Add new plants to your plant family", new_plant_path, method: :get %>
