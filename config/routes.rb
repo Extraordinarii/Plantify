@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   get 'waterings/date'
   get 'waterings/amount'
+
   get '/apply', to: "sessions#new"
-  get '/create', to: "sessions#create"
+  post '/login', to: "sessions#create"
   get '/login', to: "sessions#login"
+  get '/logout', to: "sessions#destroy"
   get '/sessions/welcome'
+
   get '/home', to: "plant_types#index"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -12,6 +15,6 @@ Rails.application.routes.draw do
   resources :plants
   resources :plant_types
   resources :owners
-
+  
 
 end
