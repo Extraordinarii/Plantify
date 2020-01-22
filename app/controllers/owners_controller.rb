@@ -4,6 +4,8 @@ class OwnersController < ApplicationController
     
     def new
         @owner = Owner.new
+        @plants = Plant.all
+        @plant_types = PlantType.all
     end
 
     def show

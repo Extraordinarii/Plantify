@@ -18,8 +18,14 @@ class PlantsController < ApplicationController
     end
 
     def create
-        @plant = Plant.create(plant_params)
-        redirect_to plant_path(@plant)
+        @plant = Plant.new(plant_params)
+        @plant.save
+        redirect_to owner_path(@plant.owner.id)
+    # else
+    #     flash[:error] = @plant.errors.full_messages
+    #     byebug
+    #     redirect_to new_plant_path
+        # end
     end
 
     def edit
@@ -38,7 +44,7 @@ class PlantsController < ApplicationController
     private
 
     def plant_params
-        params.require(:plant).permit(:name, :owner_id, :plant_type_id)
+        params.require(:plant).permit(:name, :bio, :img_url, :owner_id, :plant_type_id)
     end
 
     

@@ -3,4 +3,6 @@
 <h3><label>Plant Bio</label></h3>
 <%=@plant_type.bio%><br><br>
 <h3><label>Light Care:</h3></label>
-<%=@plant_type.light%><br>
+<%=@plant_type.light%><br><br>
+
+<%= button_to "Back To All Plants", plant_types_path, method: :get %>
