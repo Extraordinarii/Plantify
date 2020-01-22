@@ -8,7 +8,7 @@ class PlantsController < ApplicationController
 
     def new
         @plant = Plant.new
-        @owners = Owner.all
+        @owner = Owner.all
         @plant_types = PlantType.all
     end
 
@@ -18,14 +18,8 @@ class PlantsController < ApplicationController
     end
 
     def create
-        @plant = Plant.new(plant_params)
-        @plant.save
-        redirect_to owner_path(@plant.owner.id)
-    # else
-    #     flash[:error] = @plant.errors.full_messages
-    #     byebug
-    #     redirect_to new_plant_path
-        # end
+        @plant = Plant.create(plant_params)
+        redirect_to plant_types_path
     end
 
     def edit
