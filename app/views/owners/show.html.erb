@@ -3,7 +3,7 @@
 <% @owner.plants.each do |plant|%>
 <li>
 <%= link_to plant.name, plant_type_path(plant.plant_type.id)%>
-<%= button_to('Edit plant', "/plants/#{plant.id}/edit", method: "get") %>
+<%= button_to "Edit plant", "/plants/#{plant.id}/edit", method: :get) %>
 <%= button_to "Delete Plant", plant_path(plant.id), method: :delete%>
 </li>
 <li>
