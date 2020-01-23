@@ -1,9 +1,6 @@
 <%=@plant.name%>
 
-<<<<<<< HEAD
 Last watered <%= @plant.plant_waterings.watering.date_time%>
-=======
->>>>>>> 348a70ac5ed55cfeadbbc47b0a136bfd556fcf25
 <%= button_to "Update watered time", "/plants/#{@plant.id}", method: :post %>
 
 <h1><%=@plant.plant_type.species%></h1> 
