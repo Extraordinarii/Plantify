@@ -3,7 +3,7 @@ class WateringsController < ApplicationController
     @watering = Watering.new
   end
   def create
-    @watering = Watering.create(params[:date], params[:amount])
+    @watering = Watering.create(params[:date], params[:amount], params[:plant_id])
     redirect_to owner_path(@owner)
   end
 
