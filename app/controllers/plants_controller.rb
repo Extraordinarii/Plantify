@@ -15,7 +15,7 @@ class PlantsController < ApplicationController
     def last_watered_time
     
         @plant = Plant.find(params[:id])
-        @plant.waterings = Time.now
+        @plant.plant_waterings.watering.date_time = Date.now
        #render "show"
         redirect_to plant_path(@plant.id)
     end
