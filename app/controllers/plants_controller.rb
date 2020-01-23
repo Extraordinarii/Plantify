@@ -13,6 +13,7 @@ class PlantsController < ApplicationController
     end
 
     def last_watered_time
+    
         @plant = Plant.find(params[:id])
         @plant.plant_waterings.watering.date_time = Date.now
        #render "show"

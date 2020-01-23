@@ -163,7 +163,17 @@
 
 <%= button_to "Add New Plants", new_plant_path, method: :get %><br>
 
-    <% end %>
+<%= form_tag(plant_types_path, method: :get, id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Plants" %>
+<%= submit_tag "Search" %>
+<%end%>
+
+<% if @plant_types.present? %>
+  <%= render @plant_types %>
+  <%else%>
+  <%# <p>Sorry, there are no species containing the term(s) <%= params[:search] %></p>
+    <%end%>
+  <%end%>
 
 
 
@@ -203,3 +213,7 @@
   });
   return false;
 })(this);">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 05420395b6404e665d03d104d49a8002d062bf09
