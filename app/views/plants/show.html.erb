@@ -1,0 +1,10 @@
+<%=@plant.name%>
+
+then plant info from plant type bio
+
+<h1><%=@plant.plant_type.species%></h1>
+<img src= <%= @plant.plant_type.img_url%>>
+<h3><label>Plant Bio</label></h3>
+<%=@plant.plant_type.bio%><br><br>
+<h3><label>Light Care:</h3></label>
+<%=@plant.plant_type.light%><br><br>
