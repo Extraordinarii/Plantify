@@ -1,2 +1,3 @@
 class PlantWateringsController < ApplicationController
+
 end
