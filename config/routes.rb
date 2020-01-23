@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/sessions/welcome'
 
   get '/home', to: "plant_types#index"
+  post '/plants/:id', to: "plants#last_watered_time"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/', to: "plants#landing_page"

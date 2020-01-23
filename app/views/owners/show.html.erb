@@ -17,4 +17,6 @@
 <%end%>
 <% if @plant_types.present? %>
   <%= render @plant_types %>
+  <%else%>
+  <%# <p>Sorry, there are no species containing the term(s) <%= params[:search] %></p>
   <%end%>

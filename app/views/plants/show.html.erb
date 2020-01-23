@@ -1,6 +1,6 @@
 <%=@plant.name%>
 
-then plant info from plant type bio
+<%= button_to "Update watered time", "/plants/#{@plant.id}", method: :post %>
 
 <h1><%=@plant.plant_type.species%></h1> 
 <img src= <%= @plant.plant_type.img_url%> height="500" width="420" >
