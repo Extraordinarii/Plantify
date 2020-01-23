@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 2020_01_23_192037) do
     t.time "frequency"
   end
 
+  create_table "plant_waterings", force: :cascade do |t|
+    t.integer "plant_id"
+    t.integer "watering_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "plants", force: :cascade do |t|
     t.string "name"
     t.integer "owner_id"
@@ -40,7 +47,6 @@ ActiveRecord::Schema.define(version: 2020_01_23_192037) do
   create_table "waterings", force: :cascade do |t|
     t.datetime "date"
     t.string "amount"
-    t.integer "plant_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
