@@ -1,16 +1,13 @@
 <%=@plant.name%>
 
-Last watered <%= @plant.plant_waterings.watering.date_time%>
-<%= button_to "Update watered time", "/plants/#{@plant.id}", method: :post %>
-
 <h1><%=@plant.plant_type.species%></h1> 
 <img src= <%= @plant.plant_type.img_url%> height="500" width="420" >
 <h3><label>Plant Bio</label></h3>
 <%=@plant.plant_type.bio%><br><br>
 <h3><label>Light Care:</h3></label>
 <%=@plant.plant_type.light%><br><br>
-<label>Watering Amount</label>
-<% plant.waterings.each do |watering| %>
+<h3>Watering Amount</h3>
+<% @plant.waterings.each do |watering| %><br>
 <%= watering.amount%>
 <%end%>
 
@@ -53,16 +50,6 @@ Last watered <%= @plant.plant_waterings.watering.date_time%>
             </div>
             
 
-          
-        
-        
-
-      
-        
-          
-
-          
-
             
             <div class="collection">
               <a href="/login">
@@ -71,28 +58,12 @@ Last watered <%= @plant.plant_waterings.watering.date_time%>
             </div>
             
 
-          
-        
-        
-
-      
-        
-          
-
-          
-
-            
             <div class="collection active">
               <a href="/logout">
                 Logout
               </a>
             </div>
-            
-
-          
-        
-        
-
+ 
       
     </nav>
   </div>
@@ -127,17 +98,6 @@ Last watered <%= @plant.plant_waterings.watering.date_time%>
             </div>
             
 
-   
-            
-           <!-- <div class="collection">
-              <a href="/login">
-                Login
-              </a>
-            </div>
-        -->
-          
-
-            
             <div class="collection active">
               <a href="/logout">
                 Logout
