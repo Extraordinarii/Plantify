@@ -1,8 +1,5 @@
 <h1>All Houseplant Babies</h1>
 
-<%@plant_types.each do |plant_type|%><br>
+<% @plant_types.each do |plant_type|%><br>
 <%= link_to plant_type.species, plant_type_path(plant_type) %>
 <%end%>
-
-<%# <% @plant_types == nil %> 
- <%# You aint got shit %>
