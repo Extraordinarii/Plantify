@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2020_01_22_212131) do
 
   create_table "owners", force: :cascade do |t|
-    t.string "name"
     t.string "username"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
@@ -47,6 +46,7 @@ ActiveRecord::Schema.define(version: 2020_01_22_212131) do
   create_table "waterings", force: :cascade do |t|
     t.datetime "date"
     t.string "amount"
+    t.integer "owner_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
