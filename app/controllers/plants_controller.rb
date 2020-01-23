@@ -12,14 +12,6 @@ class PlantsController < ApplicationController
         @plant_types = PlantType.all
     end
 
-    def last_watered_time
-    
-        @plant = Plant.find(params[:id])
-        @plant.plant_waterings.watering.date_time = Date.now
-       #render "show"
-        redirect_to plant_path(@plant.id)
-    end
-
     def show
         @plant = Plant.find(params[:id])
         #redirect_to plant_path(@plant)

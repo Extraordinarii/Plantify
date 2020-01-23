@@ -1,3 +1,0 @@
-class PlantWateringsController < ApplicationController
-
-end

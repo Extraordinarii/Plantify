@@ -28,67 +28,26 @@
 
   <div id="mobileNavWrapper" class="nav-wrapper" data-content-field="navigation-mobileNav">
     <nav id="mobileNavigation">
-      
+<<<<<<< HEAD
 
+=======
+>>>>>>> a11603640f27efdef58e43623816656b7d1f7147
             <div class="collection">
-            <a> Welcome <%=@owner.username%>
+              <a href="/login">
+                Login
               </a>
             </div>
-            <div>
-              <p>   </p>
-            </div>
-            <div class="collection">
-              <a href="/home">
-                Plants
-              </a>
-            </div>
-
-          
-        
-        
-
-      
-        
-          
-
-          
-
-            
-            <div class="collection">
-              <a href="/logout">
-                Logout
-              </a>
-            </div>
-            
-
-          
-        
-        
-
-      
-        
-          
-
-          
-
-            
+<<<<<<< HEAD
+           <div class="collection active">
+=======
             <div class="collection active">
+>>>>>>> a11603640f27efdef58e43623816656b7d1f7147
               <a href="/logout">
                 Logout
               </a>
             </div>
-            
-
-          
-        
-        
-
-      
     </nav>
   </div>
-
-
-
     </div>
     <div id="siteWrapper" class="clearfix">
 
@@ -106,10 +65,8 @@
 
   <div id="mainNavWrapper" class="nav-wrapper" data-content-field="navigation-mainNav">
     <nav id="mainNavigation" data-content-field="navigation-mainNav">
-      
-
-
-          <div class="collection">
+           
+                       <div class="collection">
             <a> Welcome <%=@owner.username%>
               </a>
             </div>
@@ -121,36 +78,31 @@
                 Plants
               </a>
             </div>
+<<<<<<< HEAD
             
 
-   
-
-          
-
-            
+=======
+>>>>>>> a11603640f27efdef58e43623816656b7d1f7147
             <div class="collection active">
               <a href="/logout">
                 Logout
               </a>
             </div>
-
-      
+     
     </nav>
   </div>
 
   <style>.mobile-nav-toggle-label { display: inline-block !important; }</style>
-
-
 </div>
         </div>
       </header>
     
               
-                <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper"><div class="row"><div class="col"></div></div></div>
-                
+    <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper"><div class="row"><div class="col"></div></div></div>
+        <main id="page" role="main">
+        <div id="content" class="main-content" data-content-field="main-content" data-collection-id="5922fea1d2b8577cbf9013a2" data-edit-main-image=""> 
+        <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1553010701403" id="page-5922fea1d2b8577cbf9013a2">  <div class="row sqs-row"><div class="col sqs-col-12 span-12"> <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-473db7aac84ca7681634"><div class="sqs-block-content"><h1 style="white-space:pre-wrap;"> <%=@owner.username%> plant fam</h1><h3 style="white-space:pre-wrap;"></h3><p style="white-space:pre-wrap;"> 
 
-      <main id="page" role="main">
-        
 <% @owner.plants.each do |plant|%> <br>
 <%= link_to plant.name, plant_path(plant.id)%> </p>
 <%= button_to "Edit plant", edit_plant_path(plant.id), method: :get %>
@@ -171,10 +123,8 @@
     <%end%>
 
 
-</div></div></div></div></div>
-        </div><!--
-        -->
-        
+
+
       </main>
 
       <div id="preFooter">
@@ -207,3 +157,5 @@
   });
   return false;
 })(this);">
+
+
