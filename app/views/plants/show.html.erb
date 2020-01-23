@@ -1,8 +1,8 @@
 <%=@plant.name%>
 
-Last watered <%= @plant.plant_waterings.watering.date_time%>
-<%= button_to "Update watered time", "/plants/#{@plant.id}", method: :post %>
-
+<!--Last watered  @plant.plant_waterings.watering.date_time
+ button_to "Update watered time", "/plants/#{@plant.id}", method: :post 
+-->
 <h1><%=@plant.plant_type.species%></h1> 
 <img src= <%= @plant.plant_type.img_url%> height="500" width="420" >
 <h3><label>Plant Bio</label></h3>

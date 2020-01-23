@@ -28,41 +28,13 @@
 
   <div id="mobileNavWrapper" class="nav-wrapper" data-content-field="navigation-mobileNav">
     <nav id="mobileNavigation">
-      
 
-
-            
-
-          
-        
-        
-
-      
-        
-          
-
-          
-
-            
             <div class="collection">
               <a href="/login">
                 Login
               </a>
             </div>
-            
-
-          
-        
-        
-
-      
-        
-          
-
-          
-
-            
-            <div class="collection active">
+           <div class="collection active">
               <a href="/logout">
                 Logout
               </a>
@@ -113,17 +85,6 @@
             </div>
             
 
-   
-            
-           <!-- <div class="collection">
-              <a href="/login">
-                Login
-              </a>
-            </div>
-        -->
-          
-
-            
             <div class="collection active">
               <a href="/logout">
                 Logout
@@ -143,25 +104,16 @@
       </header>
     
               
-                <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper"><div class="row"><div class="col"></div></div></div>
-                
+    <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper"><div class="row"><div class="col"></div></div></div>
+        <main id="page" role="main">
+        <div id="content" class="main-content" data-content-field="main-content" data-collection-id="5922fea1d2b8577cbf9013a2" data-edit-main-image=""> 
+        <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1553010701403" id="page-5922fea1d2b8577cbf9013a2">  <div class="row sqs-row"><div class="col sqs-col-12 span-12"> <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-473db7aac84ca7681634"><div class="sqs-block-content"><h1 style="white-space:pre-wrap;"> <%=@owner.username%> plant fam</h1><h3 style="white-space:pre-wrap;"></h3><p style="white-space:pre-wrap;"> 
 
-      <main id="page" role="main">
-        
-        <!--
-        --><!--
-        --><!--
-        --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="5922fea1d2b8577cbf9013a2" data-edit-main-image="">
-         <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1553010701403" id="page-5922fea1d2b8577cbf9013a2"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-473db7aac84ca7681634"><div class="sqs-block-content"><h1 style="white-space:pre-wrap;"> <%=@owner.username%> plant fam</h1><h3 style="white-space:pre-wrap;"
-         ><%= form_tag '/login' do %></h3><p style="white-space:pre-wrap;" </p>
-
-<ul> 
-<p><% @owner.plants.each do |plant|%> <br>
+<% @owner.plants.each do |plant|%> <br>
 <%= link_to plant.name, plant_path(plant.id)%> </p>
-<%= button_to "Edit plant", "/plants/#{plant.id}/edit", method: :get %>
+<%= button_to "Edit plant", edit_plant_path(plant.id), method: :get %>
 <%= button_to "Delete Plant", plant_path(plant.id), method: :delete %>
 <%end%>
-</ul>
 
 <%= button_to "Add New Plants", new_plant_path, method: :get %><br>
 
@@ -175,14 +127,10 @@
   <%else%>
   <%# <p>Sorry, there are no species containing the term(s) <%= params[:search] %></p>
     <%end%>
-  <%end%>
 
 
 
-</div></div></div></div></div>
-        </div><!--
-        -->
-        
+
       </main>
 
       <div id="preFooter">
@@ -215,7 +163,3 @@
   });
   return false;
 })(this);">
-<<<<<<< HEAD
-=======
-
->>>>>>> 05420395b6404e665d03d104d49a8002d062bf09
