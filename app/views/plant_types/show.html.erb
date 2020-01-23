@@ -103,22 +103,15 @@
       
 
 
-            
-            <div class="collection">
-              <a href=" %> >
+          <div class="collection">
+               <a href= <%= owner_path(session[:owner_id]) %> >
                 Back to profile
               </a>
             </div>
             
 
    
-            
-           <!-- <div class="collection">
-              <a href="/login">
-                Login
-              </a>
-            </div>
-        -->
+
           
 
             
@@ -127,7 +120,6 @@
                 Logout
               </a>
             </div>
-     
 
       
     </nav>
@@ -147,11 +139,7 @@
       <main id="page" role="main">
         
 <h1><%=@plant_type.species%></h1>
-<<<<<<< HEAD
-<img src= <%= @plant_type.img_url%> height="420" width="420">
-=======
 <img src= <%= @plant_type.img_url%> height="500" width="420">
->>>>>>> 348a70ac5ed55cfeadbbc47b0a136bfd556fcf25
 <h3><label>Plant Bio</label></h3>
 <%=@plant_type.bio%><br><br>
 <h3><label>Light Care:</h3></label>
