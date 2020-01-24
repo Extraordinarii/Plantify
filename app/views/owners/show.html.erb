@@ -157,13 +157,8 @@
 <p>Last watered: <%= plant.waterings.last.date.strftime("%m/%d/%Y") %> </p>
 Next watering date: <%= (plant.waterings.last.date + 5.days).strftime("%m/%d/%Y") %> </p>
 <%end%>
-<%= button_to "Water plant", "/plants/#{plant.id}/water", method: :post %>
-<%= button_to "Edit plant", "/plants/#{plant.id}/edit", method: :get %>
-<%= button_to "Delete Plant", plant_path(plant.id), method: :delete %>
-<%end%>
-
-
-<%= button_to "Add New Plants", new_plant_path, method: :get %><br>
+<br><br>
+<%= button_to "Add A New Plant", new_plant_path, method: :get %><br>
 <%= form_tag(plant_types_path, method: :get, id: "search-form") do %>
 <%= text_field_tag :search, params[:search], placeholder: "Search Plants" %>
 <%= submit_tag "Search" %>
@@ -172,7 +167,7 @@ Next watering date: <%= (plant.waterings.last.date + 5.days).strftime("%m/%d/%Y"
 <% if @plant_types.present? %>
   <%= render @plant_types %>
   <%else%>
-  <%# <p>Sorry, there are no species containing the term(s) <%= params[:search] %></p>
+  <!-- <p>Sorry, there are no species containing the term(s) <%= params[:search] %></p> -->
     <%end%>
 
 
