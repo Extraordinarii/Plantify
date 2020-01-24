@@ -159,7 +159,7 @@
   <%end%>
 <%= button_to "Watered Plant Today!", "/plants/#{plant.id}/water", method: :post %><br>
 <%= button_to "Edit Plant Name", "/plants/#{plant.id}/edit", method: :get %>
-<%= button_to "Delete Plant", plant_path(plant.id), method: :delete %><br>
+<%= button_to "Delete Plant", plant_path(plant.id), method: :delete %>
 <%end%>
 <br><br>
 <%= button_to "Add A New Plant", new_plant_path, method: :get %><br>

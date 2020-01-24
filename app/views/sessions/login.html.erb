@@ -153,7 +153,7 @@
          <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1553010701403" id="page-5922fea1d2b8577cbf9013a2"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-473db7aac84ca7681634"><div class="sqs-block-content"><h1 style="white-space:pre-wrap;">Please enter your login data :)</h1><h3 style="white-space:pre-wrap;"
          ><%= form_tag '/login' do %></h3><p style="white-space:pre-wrap;" 
          >Username : <%= text_field_tag :"owner[username]" %><br /></p><p style="white-space:pre-wrap;" 
-         >Password : <%= text_field_tag :"owner[password]" %><br /></p><p style="white-space:pre-wrap;" >
+         >Password : <%= password_field_tag :"owner[password]" %><br /></p><p style="white-space:pre-wrap;" >
          <div class="lightbox-handle-wrapper lightbox-handle-wrapper--align-center">
          <%= submit_tag :Login, class: "lightbox-handle sqs-system-button sqs-editable-button" %>
         </div>
