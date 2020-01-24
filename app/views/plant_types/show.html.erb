@@ -142,9 +142,12 @@
 <%end%>
 
 <%= button_to "Back To All Plants", plant_types_path, method: :get %><br>
-<%= button_to "Add This Plant To Your Collection", new_plant_path, method: :get%>
 
 
+<%= form_tag '/planty/new' do %>
+<input type = 'hidden' id = 'plant_type_id' name= 'plant_type_id' value= <%=@plant_type.id%> >
+<%= submit_tag "Add This Plant To Your Collection" %>
+<%end%>
 
 
 

@@ -4,7 +4,14 @@ class PlantsController < ApplicationController
         @plant.waterings << Watering.new(plant: @plant, date: Time.now, amount: "💦💦")
         redirect_to owner_path(@plant.owner_id)
     end
-    
+
+    def planty 
+        @plant = Plant.new
+        @plant.plant_type = PlantType.find(params[:plant_type_id])
+        @owner = Owner.all
+        @plant_types = PlantType.all
+        render 'new'
+    end 
     def index 
         @plants = Plant.find(params[:id])
     end 

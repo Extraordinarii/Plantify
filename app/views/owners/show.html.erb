@@ -157,7 +157,7 @@
 <p>The plant was last watered on: <%= plant.waterings.last.date.strftime("%m/%d/%Y") %> </p>
 <p>Next watering date: <%= (plant.waterings.last.date + 5.days).strftime("%m/%d/%Y") %> </p>
   <%end%>
-<%= button_to "Watered Plant Today!", "/plants/#{plant.id}/water", method: :post %><br>
+<%= button_to "Water plant today", "/plants/#{plant.id}/water", method: :post %>
 <%= button_to "Edit Plant Name", "/plants/#{plant.id}/edit", method: :get %>
 <%= button_to "Delete Plant", plant_path(plant.id), method: :delete %>
 <%end%>
