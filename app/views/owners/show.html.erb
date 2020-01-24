@@ -155,6 +155,7 @@
 <%= link_to plant.name, plant_path(plant.id)%> </p>
 <% if plant.waterings.last %>
 <p>Last watered: <%= plant.waterings.last.date.strftime("%m/%d/%Y") %> </p>
+Next watering date: <%= (plant.waterings.last.date + 5.days).strftime("%m/%d/%Y") %> </p>
 <%end%>
 <%= button_to "Water plant", "/plants/#{plant.id}/water", method: :post %>
 <%= button_to "Edit plant", "/plants/#{plant.id}/edit", method: :get %>
