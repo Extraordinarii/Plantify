@@ -133,8 +133,10 @@
 <img src= <%= @plant_type.img_url%> height="500" width="420">
 <h3><label>Plant Bio</label></h3>
 <%=@plant_type.bio%><br><br>
-<h3><label>Light Care:</h3></label>
+<h3><label>Light Care:</h3>
 <%=@plant_type.light%><br><br>
+<h3><label>Watering Care:</h3>
+<p>Every<%= @plant_type.frequency %></p>
 
 
 <%= button_to "Back To All Plants", plant_types_path, method: :get %><br>
