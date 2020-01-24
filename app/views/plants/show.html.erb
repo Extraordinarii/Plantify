@@ -29,55 +29,23 @@
   <div id="mobileNavWrapper" class="nav-wrapper" data-content-field="navigation-mobileNav">
     <nav id="mobileNavigation">
       
-
             <div class="collection">
               <a href= <%"/owner/#{params[:session]}" %> >
                 Back to profile
               </a>
             </div>
-            
 
-          
-        
-        
-
-      
-        
-          
-
-          
-
-            
             <div class="collection">
               <a href="/logout">
                 Logout
               </a>
             </div>
-            
 
-          
-        
-        
-
-      
-        
-          
-
-          
-
-            
             <div class="collection active">
               <a href="/logout">
                 Logout
               </a>
             </div>
-            
-
-          
-        
-        
-
-      
     </nav>
   </div>
 
@@ -108,20 +76,12 @@
                 Back to profile
               </a>
             </div>
-            
 
-   
-
-          
-
-            
     <div class="collection active">
     <a href="/logout">
     Logout
     </a>
     </div>
-
-      
     </nav>
     </div>
 
@@ -133,10 +93,8 @@
     </header>
     
               
-    <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper"><div class="row"><div class="col"></div></div></div>
-                
+    <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper"><div class="row"><div class="col"></div></div></div>    
     <main id="page" role="main">
-        
     <%=@plant.name%>
 
 <h1><%=@plant.plant_type.species%></h1> 
@@ -146,17 +104,11 @@
 <h3><label>Light Care:</h3></label>
 <%=@plant.plant_type.light%><br><br>
 <h3>Watering Amount</h3>
-<% @plant.waterings.each do |watering| %><br>
-<%= watering.amount%>
-<%end%>
-
-
+<%= @plant.waterings.first.amount %><br>
 
 </div></div></div></div></div>
-        </div><!--
-        -->
-        
-      </main>
+        </div>
+        </main>
 
       <div id="preFooter">
         <div class="pre-footer-inner">
