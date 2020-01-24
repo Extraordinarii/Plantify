@@ -161,6 +161,7 @@
 <%= button_to "Edit Plant Name", "/plants/#{plant.id}/edit", method: :get %>
 <%= button_to "Delete Plant", plant_path(plant.id), method: :delete %>
 <%end%>
+<br><br>
 <%= button_to "Add A New Plant", new_plant_path, method: :get %><br>
 <%= form_tag(plant_types_path, method: :get, id: "search-form") do %>
 <%= text_field_tag :search, params[:search], placeholder: "Search Plants" %>

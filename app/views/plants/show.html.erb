@@ -104,6 +104,8 @@
 <%=@plant.plant_type.bio%><br><br>
 <h3><label>Light Requirements:</h3></label>
 <%=@plant.plant_type.light%><br><br>
+<h3><label>Watering Care:</h3>
+<p>Every <%= @plant.plant_type.frequency %> Days</p><br>
 <h3>Watering Amount</h3>
 <%= @plant.waterings.first.amount %><br>
 
