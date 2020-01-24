@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_01_23_192037) do
     t.string "bio"
     t.string "light"
     t.string "img_url"
-    t.time "frequency"
+    t.integer "frequency"
   end
 
   create_table "plants", force: :cascade do |t|

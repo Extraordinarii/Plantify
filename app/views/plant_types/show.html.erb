@@ -133,11 +133,13 @@
 <img src= <%= @plant_type.img_url%> height="500" width="420">
 <h3><label>Plant Bio</label></h3>
 <%=@plant_type.bio%><br><br>
-<h3><label>Light Care:</h3>
+<h3><label>Light Requirements:</h3>
 <%=@plant_type.light%><br><br>
 <h3><label>Watering Care:</h3>
-<p>Every<%= @plant_type.frequency %></p>
-
+<p>Every <%= @plant_type.frequency %> Days</p>
+<% if @plant_type.plants.first %> 
+<%= @plant_type.plants.first.waterings.first.amount %>
+<%end%>
 
 <%= button_to "Back To All Plants", plant_types_path, method: :get %><br>
 <%= button_to "Add This Plant To Your Collection", new_plant_path, method: :get%>
