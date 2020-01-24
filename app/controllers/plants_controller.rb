@@ -1,4 +1,10 @@
 class PlantsController < ApplicationController
+    def water_plant
+        @plant = Plant.find(params[:id])
+        @plant.waterings << Watering.new(plant: @plant, date: Time.now, amount: "💦💦")
+        redirect_to owner_path(@plant.owner_id)
+    end
+    
     def index 
         @plants = Plant.find(params[:id])
     end 
