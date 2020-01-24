@@ -156,16 +156,11 @@
 <% if plant.waterings.last %>
 <p>The plant was last watered on: <%= plant.waterings.last.date.strftime("%m/%d/%Y") %> </p>
 <p>Next watering date: <%= (plant.waterings.last.date + 5.days).strftime("%m/%d/%Y") %> </p>
-<<<<<<< HEAD
-<%= button_to "Watered Plant Today!", "/plants/#{plant.id}/water", method: :post %>
-=======
   <%end%>
-<%= button_to "Watered Plant Today!", "/plants/#{plant.id}/water", method: :post %><br>
->>>>>>> 29d5d575129091e04a5190a2775cb638d9b0a6b9
+<%= button_to "Watered Plant Today!", "/plants/#{plant.id}/water", method: :post %>
 <%= button_to "Edit Plant Name", "/plants/#{plant.id}/edit", method: :get %>
-<%= button_to "Delete Plant", plant_path(plant.id), method: :delete %><br>
+<%= button_to "Delete Plant", plant_path(plant.id), method: :delete %>
 <%end%>
-<br><br>
 <%= button_to "Add A New Plant", new_plant_path, method: :get %><br>
 <%= form_tag(plant_types_path, method: :get, id: "search-form") do %>
 <%= text_field_tag :search, params[:search], placeholder: "Search Plants" %>
