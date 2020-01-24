@@ -158,7 +158,7 @@
 <%end%>
 <%= button_to ""%>
 <%= button_to "Edit plant", "/plants/#{plant.id}/edit", method: :get %>
-<%= button_to "Delete Plant", plant_path(plant.id), method: :delete %>
+<%= button_to "Delete Plant", plant_path(plant.id), method: :delete %><br>
 <%end%>
 
 
@@ -171,7 +171,7 @@
 <% if @plant_types.present? %>
   <%= render @plant_types %>
   <%else%>
-  <%# <p>Sorry, there are no species containing the term(s) <%= params[:search] %></p>
+  <!-- <p>Sorry, there are no species containing the term(s) <%= params[:search] %></p> -->
     <%end%>
 
 
