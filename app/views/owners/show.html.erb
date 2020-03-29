@@ -150,11 +150,18 @@
                 
 
       <main id="page" role="main">
-        
+ <h1>Your Plant Collection</h1>       
+
+<%= button_to "Add A New Plant", new_plant_path, method: :get %><br>
+<%= form_tag(plant_types_path, method: :get, id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Plants" %><br>
+<%= submit_tag "Search" %>
+<%end%>
+
 <% @owner.plants.each do |plant|%> <br>
-<%= link_to plant.name, plant_path(plant.id)%> </p>
+<h3><%= link_to plant.name, plant_path(plant.id)%></h3> </p>
 <% if plant.waterings.last %>
-<p>The plant was last watered on: <%= plant.waterings.last.date.strftime("%m/%d/%Y") %> </p>
+<p><%= plant.name %> was last watered on: <%= plant.waterings.last.date.strftime("%m/%d/%Y") %> </p>
 <p>Next watering date: <%= (plant.waterings.last.date + 5.days).strftime("%m/%d/%Y") %> </p>
   <%end%>
 <%= button_to "Water plant today", "/plants/#{plant.id}/water", method: :post %>
@@ -162,11 +169,7 @@
 <%= button_to "Delete Plant", plant_path(plant.id), method: :delete %>
 <%end%>
 <br><br>
-<%= button_to "Add A New Plant", new_plant_path, method: :get %><br>
-<%= form_tag(plant_types_path, method: :get, id: "search-form") do %>
-<%= text_field_tag :search, params[:search], placeholder: "Search Plants" %>
-<%= submit_tag "Search" %>
-<%end%>
+
 
 <% if @plant_types.present? %>
   <%= render @plant_types %>

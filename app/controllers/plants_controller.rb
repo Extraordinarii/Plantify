@@ -27,7 +27,6 @@ class PlantsController < ApplicationController
 
     def show
         @plant = Plant.find(params[:id])
-        #redirect_to plant_path(@plant)
     end
 
     def create
