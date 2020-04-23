@@ -1,5 +1,10 @@
 class SessionsController < ApplicationController
-  def new
+  def new 
+  end 
+  def create_account
+  owner = Owner.create(username: params[:person][:username], password: params[:person][:username])
+  
+  redirect_to owner_path(owner)
   end
 
   def create 

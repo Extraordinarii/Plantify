@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'waterings/amount'
 
   get '/apply', to: "sessions#new"
+  post '/apply', to: "sessions#create_account"
   post '/login', to: "sessions#create"
   get '/login', to: "sessions#login"
   get '/logout', to: "sessions#destroy"
