@@ -137,9 +137,9 @@
 <%=@plant_type.light%><br><br>
 <h3><label>Watering Care:</h3>
 <p>Every <%= @plant_type.frequency %> Days</p>
-<% if @plant_type.plants.first %> <br>
+<%# <% if @plant_type.plants.first %> <br> %>
 <h3><label>Watering Amount:</h3> 
-<%= @plant_type.plants.first.waterings.first.amount %><br>
+<%# <%= @waterings.first.amount %><br> %>
 <%end%>
 
 <br><%= button_to "Back To Plant Library", plant_types_path, method: :get %><br>

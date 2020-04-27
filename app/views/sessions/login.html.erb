@@ -1,9 +1,9 @@
 <h1>Login</h1>
 
 
-<h3><%= form_for :person do |f| %></h3>
+<h3><%= form_for :owners do |f| %></h3>
       <p>Username : <%= f.text_field :username %><br /></p>
-      <p>Password :  <%= f.text_field :password %><br /></p>
+      <p>Password : <%= f.text_field :password %><br /></p>
       
       <%= f.submit "Submit" %>
       <% end %>
