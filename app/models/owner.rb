@@ -3,4 +3,5 @@ class Owner < ApplicationRecord
     has_many :plants
     has_many :plant_types, through: :plants
     has_many :waterings
+    has_many :plant_types, through: :waterings
 end
